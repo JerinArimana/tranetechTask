@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: $tertiary-font;
+  line-height: 1.5rem;
+  @media ($upto-small) {
+    font-size: 14px;
+  }
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+.no-line {
+  text-decoration: none;
+}

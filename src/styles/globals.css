@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 768px) {
+  .mobile_logo {
+    display: none;
+  }
+}
+
+.custom-body {
+  justify-content: space-between !important;
+  width: 100%;
+}
+.header .custom-nav {
+  width: 100% !important;
+}
