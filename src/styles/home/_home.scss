@@ -5,6 +5,9 @@
   background-size: cover;
   padding-top: 2.5rem;
   padding-bottom: 10rem;
+  @media ($mobile) {
+    padding-bottom: 0rem;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,14 +19,37 @@
       padding: 0rem 0rem;
       gap: 2rem;
     }
+    .swiper-button-next {
+      right: 0rem !important;
+    }
+    .swiper-button-prev {
+      left: 0rem !important;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 100%;
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      font-size: 1rem;
+    }
   }
   &__slider {
     width: 540px;
+    .mySwiper {
+      padding: 0rem 1rem;
+    }
     @media ($upto-small) {
       width: 100%;
     }
     @media ($medium) {
       width: 300px;
+    }
+    @media ($large) {
+      width: 400px;
     }
     label {
       font-size: 1.188rem;
@@ -35,13 +61,18 @@
       font-size: 3.563rem;
       font-weight: 600;
       line-height: 4.063rem;
-      //   @media ($mobile) {
-      //     font-size: 2rem;
-      //   }
+      @media ($mobile) {
+        font-size: 2.3rem;
+        line-height: 3.063rem;
+      }
       //   @media ($small) {
       //     font-size: 2.3rem;
       //   }
       @media ($medium) {
+        font-size: 2.3rem;
+        line-height: 3rem;
+      }
+      @media ($large) {
         font-size: 2.3rem;
         line-height: 3rem;
       }
@@ -61,12 +92,19 @@
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 4rem;
+    @media ($mobile) {
+      margin-top: 0rem;
+    }
     @media ($upto-small) {
       width: 100%;
       max-width: 100%;
     }
     @media ($medium) {
       width: calc(100% - 300px - 2rem);
+      margin-top: 2rem;
+    }
+    @media ($large) {
+      width: calc(100% - 400px - 2rem);
       margin-top: 2rem;
     }
     ul {
@@ -115,10 +153,17 @@
   }
   .slider-item {
     margin-top: 2rem;
+    overflow: hidden;
+    border-radius: 1rem;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 1.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -139,10 +184,24 @@
   &__customers {
     background-color: white;
     padding: 1rem 2rem;
-    width: 360px;
+    max-width: 360px;
     border-radius: 3rem;
     display: flex;
     gap: 1rem;
+    p {
+      font-size: 1.188rem;
+      font-weight: 500;
+      line-height: 1.813rem;
+      @media ($mobile) {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
+    img {
+      @media ($mobile) {
+        width: 120px;
+      }
+    }
   }
   &__listings {
     background-color: white;
@@ -151,6 +210,11 @@
     border-radius: 3rem;
     display: flex;
     gap: 1rem;
+    p {
+      font-size: 1.188rem;
+      font-weight: 500;
+      line-height: 1.813rem;
+    }
   }
   img {
     height: 100%;
@@ -166,10 +230,17 @@
     }
   }
   &__tr_slider {
+    .mySwiper {
+      padding-bottom: 3rem;
+    }
   }
   &__tr_text {
     text-align: center;
     margin-bottom: 3rem;
+    @media ($upto-small) {
+      margin-bottom: 2rem;
+      padding-top: 3rem;
+    }
     p {
       font-size: 1rem;
       line-height: 1.5rem;
@@ -181,15 +252,29 @@
 
 .WhoAreWe {
   &__wrapper {
-    @media ($mobile) {
+    @media ($upto-medium) {
       flex-direction: column;
     }
   }
   &__content_info {
     width: 500px;
-    @media ($mobile) {
+    @media ($upto-medium) {
       width: 100%;
     }
+    @media ($medium) {
+      width: 100%;
+    }
+    @media ($large) {
+      width: 400px;
+    }
+    .page_title {
+      @media ($upto-small) {
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 2rem;
+      }
+    }
+
     .page_label,
     .page_title {
       margin-bottom: 1rem;
@@ -197,17 +282,34 @@
   }
   &__content_image {
     width: calc(100% - 500px);
-    @media ($mobile) {
+    @media ($upto-medium) {
       width: 100%;
+    }
+    @media ($medium) {
+      width: 100%;
+    }
+    @media ($large) {
+      width: calc(100% - 400px);
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @media ($medium) {
+        object-fit: contain !important;
+      }
     }
   }
   &__sub_item {
     max-width: 400px;
+    @media ($upto-medium) {
+      max-width: 100%;
+    }
+    p {
+      @media ($mobile) {
+        padding-right: 0rem;
+      }
+    }
   }
 }
 
@@ -229,6 +331,21 @@
       text-align: center;
       margin-bottom: 1.5rem;
       margin: 0 auto;
+      @media ($upto-small) {
+        width: 50px;
+        height: 50px;
+        padding: 1rem;
+      }
+      @media ($medium) {
+        width: 60px;
+        height: 60px;
+        padding: 1.3rem;
+      }
+      @media ($large) {
+        width: 60px;
+        height: 60px;
+        padding: 1.3rem;
+      }
     }
   }
   &__list {
@@ -252,6 +369,7 @@
       font-size: 1.188rem;
       font-weight: 500;
       line-height: 1.813rem;
+      margin-top: 1rem;
     }
   }
 }
@@ -269,6 +387,7 @@
     height: 320px;
     overflow: hidden;
     border-radius: 1.5rem;
+
     @media ($mobile) {
       height: 200px;
     }
@@ -276,6 +395,28 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 1.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    h2 {
+      font-size: 3.563rem;
+      margin-bottom: 1rem;
+      @media ($mobile) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      @media ($medium) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    p {
+      @media ($mobile) {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -292,6 +433,18 @@
       padding-right: 0rem;
       gap: 2rem;
     }
+    @media ($small) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 0rem;
+      padding-right: 0rem;
+      gap: 2rem;
+    }
+    @media ($medium) {
+      grid-template-columns: repeat(4, 1fr);
+      padding-left: 0rem;
+      padding-right: 0rem;
+      gap: 2rem;
+    }
   }
   &__list_item {
     text-align: center;
@@ -302,6 +455,14 @@
       color: $quinary-color;
       @media ($mobile) {
         font-size: 1.2rem;
+      }
+      @media ($medium) {
+        font-size: 1.5rem;
+        margin-bottom: 0rem !important;
+      }
+      @media ($large) {
+        font-size: 1.5rem;
+        margin-bottom: 0rem !important;
       }
     }
     p {
@@ -314,6 +475,13 @@
   &__list_item_image {
     border-radius: 9rem 3rem 3rem 3rem;
     overflow: hidden;
+    img {
+      transition: all 1.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
@@ -327,11 +495,36 @@
   &__list_content {
     color: white;
     margin-top: 1.5rem;
+    @media ($upto-medium) {
+      padding-bottom: 2rem;
+      padding-right: 0rem;
+    }
+    @media ($large) {
+      padding-right: 0rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      padding-right: 0rem;
+      margin-bottom: 2rem;
+    }
     h5 {
       font-size: 1.688rem;
 
       font-weight: 500;
       line-height: 2.563rem;
+      @media ($small) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 0.5em;
+      }
+      @media ($medium) {
+        font-size: 1.3rem;
+        margin-bottom: 0.5em;
+        line-height: 2rem;
+      }
+      @media ($large) {
+        padding-right: 0rem;
+      }
     }
     p {
       font-size: 1rem;
@@ -349,6 +542,29 @@
       align-items: center;
       justify-content: center;
       margin-left: auto;
+      @media ($small) {
+        width: 40px;
+        height: 40px;
+
+        padding: 0.7rem;
+      }
+      @media ($medium) {
+        width: 40px;
+        height: 40px;
+
+        padding: 0.7rem;
+      }
+    }
+  }
+  &__list_img {
+    overflow: hidden;
+    border-radius: 2rem;
+    img {
+      transition: all 1.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -356,6 +572,7 @@
 .testimonials {
   &__wrapper {
     display: flex;
+    position: relative;
     @media ($upto-small) {
       flex-direction: column;
     }
@@ -365,14 +582,33 @@
     @media ($upto-small) {
       width: 100%;
     }
+    @media ($medium) {
+      width: calc(100% - 350px);
+    }
     .sec-header {
       @media ($upto-small) {
         padding: 0rem;
+        margin-bottom: 2rem;
+      }
+      @media ($medium) {
+        padding-right: 0rem;
+      }
+      @media ($large) {
+        padding-right: 0rem;
       }
       h2,
       p {
         @media ($upto-small) {
           padding: 0rem;
+        }
+        @media ($medium) {
+          padding-right: 0rem;
+        }
+        @media ($large) {
+          padding-right: 0rem;
+        }
+        @media (min-width: 1200px) and (max-width: 1399.98px) {
+          padding-right: 5rem;
         }
       }
     }
@@ -381,6 +617,9 @@
     width: 500px;
     @media ($mobile) {
       width: 100%;
+    }
+    @media ($medium) {
+      width: 350px;
     }
     .mySwiper {
       height: 400px;
@@ -396,6 +635,7 @@
     .quats_img {
       width: 60px;
       height: 37px;
+      margin-bottom: 1rem;
     }
   }
   &__slider_user_info {
@@ -438,6 +678,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 2rem;
     @media ($upto-small) {
       flex-direction: column-reverse;
       align-items: flex-start;
@@ -462,11 +703,52 @@
       padding: 2rem;
       display: inline-block;
     }
+    @media ($upto-medium) {
+      flex-direction: column;
+      width: 100%;
+
+      display: inline-block;
+    }
+    @media ($large) {
+      gap: 3rem;
+      padding-right: 3rem;
+    }
+    @media ($xl) {
+      padding-right: 18rem;
+    }
     button {
       background-color: white;
       color: black;
       padding: 1rem 3rem;
       border-radius: 2rem;
+      width: 200px;
+      @media ($upto-medium) {
+        margin-top: 1rem;
+        padding: 0.5rem 2rem;
+      }
+      @media ($large) {
+        width: calc(100% - 310px - 2rem);
+        padding: 1rem 0rem;
+      }
+      @media ($xl) {
+        width: calc(100% - 510px - 2rem);
+        padding: 1rem 1rem;
+        width: 200px;
+      }
+    }
+    .sec-header {
+      @media ($large) {
+        width: 310px;
+      }
+      @media ($xl) {
+        width: 510px;
+        // padding-right: 10rem;
+      }
+      p {
+        @media ($xl) {
+          padding-right: 8rem;
+        }
+      }
     }
   }
 }
@@ -481,10 +763,32 @@
   font-size: 2.438rem;
   font-weight: 600;
   line-height: 2.938rem;
+  @media ($mobile) {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  @media ($large) {
+    font-size: 1.78rem;
+    line-height: 2rem;
+  }
 }
 .page_p {
   font-size: 1rem;
   line-height: 1.625rem;
   font-weight: 400;
   color: $secondary;
+}
+
+.mySwiper {
+  padding-bottom: 3rem !important;
+}
+
+.sec-header {
+  @media ($small) {
+    margin-bottom: 2.5rem;
+  }
+  @media ($medium) {
+    // margin-bottom: 2.5rem;
+  }
 }

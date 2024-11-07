@@ -11,13 +11,14 @@ import c4 from "../../public/images/c-4.png";
 import c5 from "../../public/images/c-5.png";
 import c6 from "../../public/images/c-6.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import Form from "react-bootstrap/Form";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
 // import required modules
-import { Pagination } from "swiper/modules";
+
 import { Container } from "react-bootstrap";
 import BannerCard from "../../components/UI/bannerCard";
 import HappyCustomersCard from "../../components/UI/happyCustomersCard";
@@ -65,7 +66,10 @@ export default function Home() {
                 pagination={{
                   clickable: true,
                 }}
-                modules={[Pagination]}
+                navigation={true}
+                mousewheel={true}
+                keyboard={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"
               >
                 {bannerImg.map((data) => (
@@ -208,7 +212,9 @@ export default function Home() {
                 pagination={{
                   clickable: true,
                 }}
-                modules={[Pagination]}
+                mousewheel={true}
+                keyboard={true}
+                modules={[Pagination, Mousewheel, Keyboard]}
                 breakpoints={{
                   640: {
                     slidesPerView: 2.5,
@@ -236,39 +242,39 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="WhoAreWe pt-20 pb-20">
+      <section className="WhoAreWe pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <WhoAreWe />
         </Container>
       </section>
 
-      <section className="ourServices pt-20 pb-20">
+      <section className="ourServices pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <OurServices />
         </Container>
       </section>
-      <section className="neighborhood pt-20 pb-20">
+      <section className="neighborhood pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <Neighborhood />
         </Container>
       </section>
 
-      <section className="team pt-20 pb-20">
+      <section className="team pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <Team />
         </Container>
       </section>
-      <section className="tranding-blog pt-20 pb-20 bg-[#4361ee]">
+      <section className="tranding-blog pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20 bg-[#4361ee]">
         <Container>
           <Tranding />
         </Container>
       </section>
-      <section className="testimonials pt-20 pb-20">
+      <section className="testimonials pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <Testimonials />
         </Container>
       </section>
-      <section className="become-agent pt-20 pb-20">
+      <section className="become-agent pt-10 pb-10 md:pt-10 md:pb-10 lg:pt-20 lg:pb-20">
         <Container>
           <BecomeAgent />
         </Container>

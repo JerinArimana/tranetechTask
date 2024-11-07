@@ -47,8 +47,8 @@ const Footer = () => {
                         d="M6 5.00024L11 8.50024L16 5.00024"
                         stroke="#2B2B2B"
                         strokeWidth="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                       <path
                         d="M1 13V3C1 1.89543 1.89543 1 3 1H19C20.1046 1 21 1.89543 21 3V13C21 14.1046 20.1046 15 19 15H3C1.89543 15 1 14.1046 1 13Z"

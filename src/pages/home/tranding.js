@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import b1 from "../../../public/images/b1.png";
 import b2 from "../../../public/images/b2.png";
 import b3 from "../../../public/images/b3.png";
@@ -47,10 +47,14 @@ const Tranding = () => {
           <>
             <Swiper
               spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              navigation={true}
+              // pagination={true}
+              // mousewheel={true}
+              // keyboard={true}
+              modules={[Navigation, Pagination]}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
@@ -100,15 +104,6 @@ const Tranding = () => {
                   </div>
                 </SwiperSlide>
               ))}
-
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
             </Swiper>
           </>
         </div>

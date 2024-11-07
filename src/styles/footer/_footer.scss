@@ -32,6 +32,9 @@
       h4 {
         font-size: 1.188rem;
         font-weight: 500;
+        @media ($mobile) {
+          padding-right: 0rem;
+        }
       }
       p {
         font-weight: 400;

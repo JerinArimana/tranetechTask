@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import user_img from "../../../public/images/user_img.png";
 import TestimonialsCard from "../../../components/UI/testimonialsCard";
@@ -67,10 +67,28 @@ const Testimonials = () => {
         <div className="testimonials__slider">
           <Swiper
             direction={"vertical"}
-            pagination={{
-              clickable: true,
+            // pagination={{
+            //   clickable: true,
+            // }}
+            navigation={true}
+            pagination={true}
+            mousewheel={true}
+            keyboard={true}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 1,
+                spaceBetween: 50,
+              },
             }}
-            modules={[Pagination]}
             className="mySwiper"
           >
             {testimonialsData.map((data) => (

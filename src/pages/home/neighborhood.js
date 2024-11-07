@@ -25,7 +25,7 @@ const Neighborhood = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-4xl font-bold">216</p>
+                <h2 className="text-4xl font-bold">216</h2>
                 <p className="text-lg font-semibold">New York City</p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Neighborhood = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-4xl font-bold">216</p>
+                <h2 className="text-4xl font-bold">216</h2>
                 <p className="text-lg font-semibold">New York City</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ const Neighborhood = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-4xl font-bold">216</p>
+                <h2 className="text-4xl font-bold">216</h2>
                 <p className="text-lg font-semibold">New York City</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Neighborhood = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-4xl font-bold">216</p>
+                <h2 className="text-4xl font-bold">216</h2>
                 <p className="text-lg font-semibold">New York City</p>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Neighborhood = () => {
                 className="w-full h-full object-cover opacity-80"
               />
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-4xl font-bold">216</p>
+                <h2 className="text-4xl font-bold">216</h2>
                 <p className="text-lg font-semibold">New York City</p>
               </div>
             </div>

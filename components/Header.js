@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="bg-[#3A0CA3] text-[#ffffff] py-2">
+        <div className="topNav bg-[#3A0CA3] text-[#ffffff] py-2">
           <Container>
             <div className="flex justify-between md:flex-row flex-col">
               <p className="flex gap-1">
@@ -37,8 +37,8 @@ const Header = () => {
                     fill="#2B2B2B"
                     stroke="white"
                     strokeWidth="1.2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 Rezilla, 18 Grattan St, Brooklyn
@@ -55,7 +55,14 @@ const Header = () => {
         <Container>
           <Navbar expand="md" className="w-full">
             <Navbar.Brand className="md:hidden" href="#home">
-              React-Bootstrap
+              <div>
+                <Image
+                  src={brandLogo}
+                  alt="Picture of the author"
+                  width={140}
+                  height={50}
+                />
+              </div>
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
@@ -66,10 +73,19 @@ const Header = () => {
               show={show}
               onHide={handleClose}
               responsive="md"
-              className="custom-nav"
+              className="custom-nav offCanvar_mobile"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
+                <Offcanvas.Title>
+                  <div>
+                    <Image
+                      src={brandLogo}
+                      alt="Picture of the author"
+                      width={140}
+                      height={50}
+                    />
+                  </div>
+                </Offcanvas.Title>
               </Offcanvas.Header>
               <Navbar id="basic-navbar-nav " className="w-full">
                 <Offcanvas.Body className="custom-body w-full justify-between">
@@ -80,7 +96,7 @@ const Header = () => {
                     <Nav.Link href="#link">Services </Nav.Link>
                     <Nav.Link href="#link">Blogs</Nav.Link>
                   </Nav>
-                  <div>
+                  <div className="brand_logo">
                     <Image
                       src={brandLogo}
                       alt="Picture of the author"
@@ -89,36 +105,39 @@ const Header = () => {
                     />
                   </div>
 
-                  <div className="flex items-center gap-1.5">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.5 14.5C5.5 12.0147 7.51472 10 10 10C12.4853 10 14.5 12.0147 14.5 14.5"
-                        stroke="#2B2B2B"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M9.99999 10.0001C11.4912 10.0001 12.7 8.79131 12.7 7.3001C12.7 5.80893 11.4912 4.6001 9.99999 4.6001C8.50878 4.6001 7.29999 5.80893 7.29999 7.3001C7.29999 8.79131 8.50878 10.0001 9.99999 10.0001Z"
-                        stroke="#2B2B2B"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
-                        stroke="#2B2B2B"
-                        strokeWidth="1.6"
-                      />
-                    </svg>
+                  <div className="log_item flex items-center gap-2">
+                    <div className="flex gap-3 ">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.5 14.5C5.5 12.0147 7.51472 10 10 10C12.4853 10 14.5 12.0147 14.5 14.5"
+                          stroke="#2B2B2B"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M9.99999 10.0001C11.4912 10.0001 12.7 8.79131 12.7 7.3001C12.7 5.80893 11.4912 4.6001 9.99999 4.6001C8.50878 4.6001 7.29999 5.80893 7.29999 7.3001C7.29999 8.79131 8.50878 10.0001 9.99999 10.0001Z"
+                          stroke="#2B2B2B"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
+                          stroke="#2B2B2B"
+                          strokeWidth="1.6"
+                        />
+                      </svg>
 
-                    <p>Login/Register</p>
-                    <div className="ml-3">
+                      <p>Login/Register</p>
+                    </div>
+
+                    <div className="">
                       <button className="flex items-center gap-1.5 bg-[#3A0CA3] text-[#FFFFFF] py-2 px-4 rounded-lg text-xs">
                         <svg
                           width="20"

@@ -2,4 +2,34 @@
   .nav-link {
     color: black;
   }
+  .topNav {
+    @media ($upto-small) {
+      display: none;
+    }
+  }
+}
+
+.offCanvar_mobile {
+  .brand_logo {
+    @media ($upto-small) {
+      display: none;
+    }
+  }
+  .navbar-nav {
+    @media ($upto-small) {
+      flex-direction: column;
+    }
+    .nav-link {
+      @media ($upto-small) {
+        border-bottom: 1px solid #8080805e;
+      }
+    }
+  }
+  .log_item {
+    @media ($upto-small) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 2rem;
+    }
+  }
 }
